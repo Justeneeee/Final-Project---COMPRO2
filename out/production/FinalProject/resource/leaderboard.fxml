@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LeaderControl">
+    <children>
+        <Pane layoutY="-1.0" prefHeight="533.0" prefWidth="200.0" style="-fx-background-color: #BD3944;">
+            <children>
+                <Button layoutX="44.0" layoutY="175.0" mnemonicParsing="false" onAction="#home" prefHeight="43.0" prefWidth="113.0" style="-fx-background-color: #BD3944; -fx-border-color: white;" text="Home" textFill="WHITE">
+                    <font>
+                        <Font name="Yu Gothic UI Semibold" size="22.0" />
+                    </font>
+                </Button>
+                <Button layoutX="14.0" layoutY="500.0" mnemonicParsing="false" onAction="#logout" prefHeight="11.0" prefWidth="55.0" style="-fx-background-color: #BD3944; -fx-border-color: white;" text="Log out" textFill="WHITE">
+                    <font>
+                        <Font name="Yu Gothic UI Semibold" size="9.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="154.0" fitWidth="194.0" layoutX="21.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="197.0" prefHeight="532.0" prefWidth="603.0" style="-fx-background-color: #53212B;">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="25.0" prefHeight="96.0" prefWidth="339.0" style="-fx-border-color: white;" text="Leaderboard" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Yu Gothic UI Semibold" size="28.0" />
+                    </font>
+                </Label>
+                <Line endX="336.0" endY="-10.0" layoutX="242.0" layoutY="157.0" startX="-218.0" startY="-10.0" stroke="WHITE" strokeWidth="2.0" />
+                <TextField fx:id="searchField" layoutX="94.0" layoutY="190.0" prefHeight="25.0" prefWidth="207.0" promptText="Enter user/rank" />
+                <TableView fx:id="tableView" layoutX="23.0" layoutY="220.0" prefHeight="298.0" prefWidth="563.0" style="-fx-border-color: white;">
+                    <columns>
+                        <TableColumn fx:id="playerNameColumn" prefWidth="166.0" text="User" />
+                        <TableColumn fx:id="scoreColumn" prefWidth="212.0" text="Score" />
+                        <TableColumn fx:id="rankColumn" prefWidth="184.0" text="Rank" />
+                    </columns>
+                </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-10.0" layoutY="186.0" prefHeight="33.0" prefWidth="131.0" text="Search:" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="16.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
